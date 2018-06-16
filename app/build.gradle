@@ -20,6 +20,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "api"
+    productFlavors {
+        prod {
+            dimension "api"
+            buildConfigField "String", "API_BASE_URL", '"https://api.pexels.com/"'
+        }
+    }
 }
 
 dependencies {
