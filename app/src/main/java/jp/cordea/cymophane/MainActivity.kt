@@ -1,7 +1,7 @@
 package jp.cordea.cymophane
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import jp.cordea.cymophane.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {

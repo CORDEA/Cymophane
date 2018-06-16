@@ -1,6 +1,6 @@
 package jp.cordea.cymophane.ui.main
 
-import android.arch.paging.PageKeyedDataSource
+import androidx.paging.PageKeyedDataSource
 import jp.cordea.cymophane.PexelsApiClient
 import jp.cordea.cymophane.data.Photo
 import jp.cordea.cymophane.data.Search
