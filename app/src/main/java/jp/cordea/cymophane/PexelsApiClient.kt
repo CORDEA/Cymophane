@@ -1,14 +1,15 @@
-package jp.cordea.cymophane.ui
+package jp.cordea.cymophane
 
 import com.squareup.moshi.KotlinJsonAdapterFactory
 import com.squareup.moshi.Moshi
-import jp.cordea.cymophane.BuildConfig
+import jp.cordea.cymophane.data.Search
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-class PexelsApiClient : PexelsApi {
+object PexelsApiClient : PexelsApi {
     private val service: PexelsApi
         get() {
             val key = ""
@@ -37,4 +38,7 @@ class PexelsApiClient : PexelsApi {
                     .build()
                     .create(PexelsApi::class.java)
         }
+
+    override fun search(query: String, perPage: Int, page: Int): Call<Search> =
+            service.search(query, perPage, page)
 }
